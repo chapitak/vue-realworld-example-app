@@ -30,6 +30,15 @@
                   Global Feed
                 </router-link>
               </li>
+              <li v-if="isAuthenticated" class="nav-item">
+                <router-link
+                  :to="{ name: 'my-article-histories' }"
+                  class="nav-link"
+                  active-class="active"
+                >
+                  My History
+                </router-link>
+              </li>
               <li class="nav-item" v-if="tag">
                 <router-link
                   :to="{ name: 'home-tag', params: { tag } }"

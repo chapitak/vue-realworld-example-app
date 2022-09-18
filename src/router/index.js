@@ -23,6 +23,11 @@ export default new Router({
           path: "tag/:tag",
           name: "home-tag",
           component: () => import("@/views/HomeTag")
+        },
+        {
+          path: "my-article-histories",
+          name: "my-article-histories",
+          component: () => import("@/views/HomeMyHistory")
         }
       ]
     },
