@@ -109,3 +109,9 @@ export const FavoriteService = {
     return ApiService.delete(`articles/${slug}/favorite`);
   }
 };
+
+export const ArticleHistoryService = {
+  get(id) {
+    return ApiService.get("articles/history", id);
+  }
+};

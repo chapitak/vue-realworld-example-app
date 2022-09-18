@@ -2,10 +2,12 @@ import Vue from "vue";
 import {
   ArticlesService,
   CommentsService,
-  FavoriteService
+  FavoriteService,
+  ArticleHistoryService
 } from "@/common/api.service";
 import {
   FETCH_ARTICLE,
+  FETCH_ARTICLE_HISTORY,
   FETCH_COMMENTS,
   COMMENT_CREATE,
   COMMENT_DESTROY,
@@ -47,6 +49,15 @@ export const actions = {
       return context.commit(SET_ARTICLE, prevArticle);
     }
     const { data } = await ArticlesService.get(articleSlug);
+    context.commit(SET_ARTICLE, data.article);
+    return data;
+  },
+  async [FETCH_ARTICLE_HISTORY](context, id, prevArticle) {
+    // avoid extronuous network call if article exists
+    if (prevArticle !== undefined) {
+      return context.commit(SET_ARTICLE, prevArticle);
+    }
+    const { data } = await ArticleHistoryService.get(id);
     context.commit(SET_ARTICLE, data.article);
     return data;
   },

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RwvArticleList from "@/components/ArticleList";
+import RwvArticleList from "@/components/ArticleHistoryList ";
 
 export default {
   name: "rwv-home-my-history",
