@@ -5,7 +5,9 @@
         <h1>{{ article.title }}</h1>
       </div>
     </div>
-    <div class="container page">
+    <div class="container">
+      <div class="col-xs-12">이력유형: {{ article.revType }}</div>
+      <hr />
       <div class="row article-content">
         <div class="col-xs-12">
           <div v-html="parseMarkdown(article.body)"></div>
