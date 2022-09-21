@@ -32,7 +32,7 @@
               </li>
               <li v-if="isAuthenticated" class="nav-item">
                 <router-link
-                  :to="{ name: 'my-article-histories' }"
+                  :to="{ name: 'article-histories' }"
                   class="nav-link"
                   active-class="active"
                 >

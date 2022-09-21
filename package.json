@@ -8,7 +8,8 @@
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-router": "^3.1.3",
-    "vuex": "^3.1.1"
+    "vuex": "^3.1.1",
+    "yarn": "^1.22.19"
   },
   "description": "TodoMVC for the RealWorld™",
   "devDependencies": {
@@ -25,7 +26,7 @@
     "babel-jest": "^24.9.0",
     "cross-env": "^6.0.3",
     "lint-staged": "^8.2.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^6.0.1",
     "nyc": "^14.1.1",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"

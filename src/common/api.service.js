@@ -58,9 +58,11 @@ export const TagsService = {
 export const ArticlesService = {
   query(type, params) {
     return ApiService.query(
-      "articles" +
-        (type === "feed" ? "/feed" : "") +
-        (type === "history" ? "/my-article-histories" : ""),
+      type === "feed"
+        ? "articles/feed"
+        : type === "history"
+        ? "/article-histories"
+        : "articles",
       {
         params: params
       }
@@ -112,6 +114,6 @@ export const FavoriteService = {
 
 export const ArticleHistoryService = {
   get(id) {
-    return ApiService.get("articles/history", id);
+    return ApiService.get("article-histories", id);
   }
 };

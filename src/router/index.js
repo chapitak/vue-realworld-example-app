@@ -25,8 +25,8 @@ export default new Router({
           component: () => import("@/views/HomeTag")
         },
         {
-          path: "my-article-histories",
-          name: "my-article-histories",
+          path: "article-histories",
+          name: "article-histories",
           component: () => import("@/views/HomeMyHistory")
         }
       ]
@@ -79,7 +79,7 @@ export default new Router({
     },
     {
       name: "article-history",
-      path: "/articles/history/:id",
+      path: "/history/:id",
       component: () => import("@/views/ArticleHistory"),
       props: true
     }
